@@ -1,0 +1,20 @@
+{
+  "name": "eleventy-core",
+  "version": "1.0.0",
+  "description": "A full featured boilerplate that can be used to create Eleventy based sites with best practices out of the box.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/brentritchie/eleventy-core.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/brentritchie/eleventy-core/issues"
+  },
+  "homepage": "https://gitlab.com/brentritchie/eleventy-core#readme"
+}

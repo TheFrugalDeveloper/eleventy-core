@@ -10,7 +10,11 @@ module.exports = {
         return `${data.title} ${meta.page.title.seperator} ${site.name}`
     },
     pageDescription: (data) => {
-        return data.description;
+        if (data.description.length > meta.page.description.length) {
+            return `${data.description.slice(0, (meta.page.description.length - 1)).trim()}…`
+        } else {
+            return data.description;
+        }
     },
     pageKeywords: (data) => {
         // meta.page.keywords.count

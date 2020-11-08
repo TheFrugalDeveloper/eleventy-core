@@ -6,6 +6,9 @@ module.exports = {
     cannonicalUrl: (data) => {
         return new URL(data.page.url, site.url.base).toString();
     },
+    pageLang: (data) => {
+        return data.language || site.language || "en";
+    },
     pageTitle: (data) => {
         return `${data.title} ${meta.page.title.seperator} ${site.name}`
     },

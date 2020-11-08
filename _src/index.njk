@@ -4,17 +4,10 @@ description: Eleventy Core boilerplate is a starter file that is unopionated and
 keywords: Eleventy, 11ty, Static Site, Boilerplate, Starter File
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ pageTitle }}</title>
-    <meta name="description" content="{{ pageDescription }}">
-    <meta name="keywords" content="{{ pageKeywords }}">
-    <link rel="canonical" href="{{ cannonicalUrl }}">
-</head>
-<body>
-    {{ content }}
-</body>
-</html>
+{% extends "page.njk" %}
+
+
+{% block content %}
+<h1>Home Page</h1>
+<p>This is a test paragraph.</p>
+{% endblock %}

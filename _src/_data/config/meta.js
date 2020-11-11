@@ -1,5 +1,14 @@
 module.exports = {
     environment: process.env.NODE_ENV,
+    icons: {
+        webmanifest: [
+            {
+                src: "icon.png", // these values are for testing, change these for your own site.
+                type: "image/png",
+                sizes: "192x192"
+            }
+        ]
+    },
     page: {
         title: {
             seperator: "-",
@@ -11,5 +20,10 @@ module.exports = {
         keywords: {
             count: 5
         }
+    },
+    webmanifest: {
+        filename: "site.webmanifest",
+        startUrl: "/?utm_source=homescreen",
+        display: ["fullscreen", "standalone", "minimal-ui", "browser"][3]
     }
 }

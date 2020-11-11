@@ -2,18 +2,29 @@
 <html class="no-js" lang="{{- pageLang -}}">
     <head>
         <meta charset="utf-8">
+    <base href="{{- config.site.url.base -}}">
         <title>{{- pageTitle -}}</title>
         <meta name="description" content="{{- pageDescription -}}">
         <meta name="keywords" content="{{- pageKeywords -}}">
         <link rel="canonical" href="{{- cannonicalUrl -}}">
         <base href="{{- config.site.url.base -}}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {%- block styles -%}
-        {%- endblock -%}
-    </head>
-
-    <body>
-        {%- block main -%}
+    {%- block discovery -%}
+      <link rel="search" type="application/opensearchdescription+xml" title="Search {{- title -}}" href="{{- config.site.url.base -}}search.xml"/>
+      <link rel="sitemap" type="application/xml" title="Sitemap" href="{{- config.site.url.base -}}sitemap.xml"/>
+      <link type="text/plain" rel="author" href="{{- config.site.url.base -}}humans.txt"/>
+    {%- endblock -%}
+    {%- block appHead -%}
+      {%- if config.site.theme.color -%}
+        <meta name="theme-color" content="{{- config.site.theme.color -}}">
+      {%- endif -%}
+      {%- if config.meta.webmanifest.filename -%}
+        <link rel="manifest" href="{{- config.meta.webmanifest.filename -}}">
+      {%- endif -%}
+    {%- endblock -%}
+  </head>
+  <body>
+    {%- block main -%}
       {{- content | safe -}}
     {%- endblock -%}
     </body>

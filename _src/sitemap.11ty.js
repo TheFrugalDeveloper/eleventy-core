@@ -8,6 +8,9 @@ module.exports = {
       sitemap: {
         ignore: true
       },
+      robots: {
+        ignore: true
+      }
     }
   },
   render: async function (data) {

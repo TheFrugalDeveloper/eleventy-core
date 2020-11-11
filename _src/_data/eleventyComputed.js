@@ -6,6 +6,14 @@ module.exports = {
     cannonicalUrl: (data) => {
         return new URL(data.page.url, site.url.base).toString();
     },
+    robots: {
+        allow: (data) => {
+            return (data.robots && data.robots.allow) || false;
+        },
+        ignore: (data) => {
+            return (data.robots && data.robots.ignore) || false;
+        }
+    },
     sitemap: {
         priority: (data) => {
             return (data.sitemap && data.sitemap.priority) || 0.5;
@@ -14,7 +22,7 @@ module.exports = {
             return (data.sitemap && data.sitemap.changeFreq) || "monthly";
         },
         ignore: (data) => {
-            return data.sitemap.ignore || false;
+            return data.sitemap.ignore || !(data.robots && !data.robots.ignore && data.robots.allow) || false;
         }
     },
     pageLang: (data) => {

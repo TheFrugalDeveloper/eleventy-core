@@ -14,9 +14,7 @@
 
     <body>
         {%- block main -%}
-            {{- content -}}
-        {%- endblock -%}
-        {%- block scripts -%}
-        {%- endblock -%}
+      {{- content | safe -}}
+    {%- endblock -%}
     </body>
 </html>

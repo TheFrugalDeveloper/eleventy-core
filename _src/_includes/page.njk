@@ -3,7 +3,7 @@
 {%- block main -%}
 <main>
 {%- block content -%}
-    {{- content -}}
+      {{- content | safe -}}
 {%- endblock -%}
-</main>
+  </main>
 {%- endblock -%}

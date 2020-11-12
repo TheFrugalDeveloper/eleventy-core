@@ -20,6 +20,11 @@
   "homepage": "https://gitlab.com/brentritchie/eleventy-core#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "dotenv": "^8.2.0"
+    "@pwa/manifest": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "generate-robotstxt": "^8.0.3",
+    "humans-generator": "^2.1.1",
+    "sitemap": "^6.3.3",
+    "xml": "^1.0.1"
   }
 }
